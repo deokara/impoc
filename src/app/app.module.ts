@@ -6,10 +6,10 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
-import { ApplicationFramesModule } from './framework/application-frames/index';
+import { ApplicationFramesModule } from './framework/index';
 import { AuthenticationModule } from './authentication/index';
 import { HomeModule } from './home/index';
-import { SharedServicesModule } from './shared/shared-services/index';
+import { SharedServicesModule } from './shared/index';
 
 @NgModule({
   declarations: [
