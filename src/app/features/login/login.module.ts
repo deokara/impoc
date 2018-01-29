@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './components/login/login.component';
 import { AuthenticationService } from './services/authentication.service';
 
 @NgModule({
@@ -15,4 +15,4 @@ import { AuthenticationService } from './services/authentication.service';
   declarations: [LoginComponent],
   providers: [AuthenticationService]
 })
-export class AuthenticationModule { }
+export class LoginModule { }

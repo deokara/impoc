@@ -6,9 +6,9 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
-import { ApplicationFramesModule } from './framework/index';
-import { AuthenticationModule } from './authentication/index';
-import { HomeModule } from './home/index';
+import { FrameworkComponentsModule } from './framework/index';
+import { LoginModule } from './features/login/index';
+import { HomeModule } from './features/home/index';
 import { SharedServicesModule } from './shared/index';
 
 @NgModule({
@@ -20,8 +20,8 @@ import { SharedServicesModule } from './shared/index';
     FormsModule,
     HttpModule,
     AppRoutingModule,
-    ApplicationFramesModule,
-    AuthenticationModule,
+    FrameworkComponentsModule,
+    LoginModule,
     HomeModule,
     SharedServicesModule
   ],

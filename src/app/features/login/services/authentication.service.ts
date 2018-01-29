@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-import { LogService } from '../../shared/index';
-import { LocalstorageService } from '../../shared/index';
+import { LogService } from '../../../shared/index';
+import { LocalstorageService } from '../../../shared/index';
 
 
 @Injectable()
