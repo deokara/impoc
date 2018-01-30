@@ -6,8 +6,10 @@ export class LogService {
   constructor() { }
 
   logInfo(info: string) {
+    console.log(info);
   }
 
-  logError(info: string) {
+  logError(error: string) {
+    console.log(error);
   }
 }

@@ -8,10 +8,11 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
 import { FrameworkComponentsModule } from './framework/index';
-import { LoginModule } from './features/login/index';
-import { HomeModule } from './features/home/index';
 import { SharedServicesModule } from './shared/index';
 import { JwtInterceptor } from './shared/index';
+import { LoginModule } from './features/login/index';
+import { HomeModule } from './features/home/index';
+import { BaseconfigAreaModule } from './features/baseconfig-area/index';
 
 @NgModule({
   declarations: [
@@ -23,9 +24,10 @@ import { JwtInterceptor } from './shared/index';
     HttpModule,
     AppRoutingModule,
     FrameworkComponentsModule,
+    SharedServicesModule,
     LoginModule,
     HomeModule,
-    SharedServicesModule
+    BaseconfigAreaModule
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,

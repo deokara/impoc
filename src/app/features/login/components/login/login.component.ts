@@ -30,9 +30,10 @@ export class LoginComponent implements OnInit {
     this.authenticationService.login(this.user)
     .subscribe(
       res => {
-        this.logService.logInfo('Login successful');
-        this.localstorageService.setUserToken(JSON.stringify(res));
-        this.router.navigate(['home']);
+        const token = JSON.stringify(res);
+        this.logService.logInfo('Login successful with token ' + token);
+        this.localstorageService.setUserToken(token);
+        this.router.navigate(['areas']);
       },
       err => {
         this.logService.logInfo('Login unsuccessful');
