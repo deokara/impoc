@@ -1,6 +1,6 @@
-<h1>
-  Area List
-</h1>
-<div>
-  <input type="text" name="data" [(ngModel)]="data" />
-</div>
+<h2>Areas</h2>
+<ul>
+  <li *ngFor="let area of areas" (click)="onSelect(area)">
+    <span class="badge">{{area.Key}}</span> {{area.Value}}
+  </li>
+</ul>

@@ -10,6 +10,6 @@ describe('AreaService', () => {
   });
 
   it('should be created', inject([AreaService], (service: AreaService) => {
-    expect(service).toBeTruthy();
+    expect(service).toBeTruthy(); 
   }));
 });

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { AreaService } from '../../services/area.service';
 import { LogService } from '../../../../shared/index';
+import { Area } from '../../models/area';
 
 @Component({
   selector: 'app-area-list',
@@ -9,7 +10,7 @@ import { LogService } from '../../../../shared/index';
   styleUrls: ['./area-list.component.css']
 })
 export class AreaListComponent implements OnInit {
-  data: string;
+  areas: Area[];
 
   constructor(
     private areaService: AreaService,
@@ -18,13 +19,17 @@ export class AreaListComponent implements OnInit {
   ngOnInit() {
     this.areaService.getAreas()
     .subscribe(
-      res => {
-        this.data = JSON.stringify(res);
-        this.logService.logInfo('Got areas ' + this.data);
+      areas => {
+        this.areas = areas;
+        this.logService.logInfo('Got areas ' + JSON.stringify(areas));
       },
       err => {
         this.logService.logInfo('Error');
       }
     );
+  }
+
+  onSelect(area: Area): void {
+    this.areaService.setSelectedArea(area);
   }
 }
