@@ -5,15 +5,17 @@ export class LocalstorageService {
 
   constructor() { }
 
+  private TOKEN_KEY = 'userToken';
+
   setUserToken(token: string): void {
-    localStorage.setItem('userToken', token);
+    localStorage.setItem(this.TOKEN_KEY, token);
   }
 
   getUserToken(): string {
-    return localStorage.getItem('userToken');
+    return localStorage.getItem(this.TOKEN_KEY);
   }
 
   removeUserToken(): void {
-    localStorage.removeItem('userToken');
+    localStorage.removeItem(this.TOKEN_KEY);
   }
 }
